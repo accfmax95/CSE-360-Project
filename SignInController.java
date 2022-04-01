@@ -38,6 +38,18 @@ public class SignInController {
     @FXML
     void verifyLogin(ActionEvent event) {
 
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
+
+            Stage primaryStage = new Stage();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.initModality(Modality.NONE);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
     }
 
 }
