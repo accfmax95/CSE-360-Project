@@ -18,8 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
 
         try {
-           Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SignIn.fxml")));
-
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SignIn.fxml")));
 
             Scene scene = new Scene(root, 335, 600);
             primaryStage.setScene(scene);
