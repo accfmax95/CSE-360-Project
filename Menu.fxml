@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuController">
    <children>
       <Text layoutX="141.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
@@ -37,13 +36,13 @@
             <Image url="@download.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="289.0" layoutY="49.0" onMouseClicked="#accessCart" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="289.0" layoutY="47.0" onMouseClicked="#accessCart" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images%20(1).png" />
          </image>
       </ImageView>
       <ScrollPane fx:id="menuPane" layoutX="22.0" layoutY="118.0" prefHeight="432.0" prefWidth="293.0" />
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="257.0" layoutY="49.0" onMouseClicked="#plusButtonIcon" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="254.0" layoutY="47.0" onMouseClicked="#plusButtonIcon" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@blue-button-plus-white-background-164089259.jpeg" />
          </image>
