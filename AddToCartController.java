@@ -1,9 +1,9 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -11,19 +11,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class MenuController {
+public class AddToCartController {
 
     @FXML
-    private ScrollPane menuPane;
+    private ScrollPane ingredientList;
 
     @FXML
-    private TextField searchedItem;
-
-    @FXML
-    void accessCart(MouseEvent event) {
+    void addToCart(ActionEvent event) {
 
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Cart.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
 
             Stage primaryStage = new Stage();
             Scene scene = new Scene(root);
@@ -37,10 +34,10 @@ public class MenuController {
     }
 
     @FXML
-    void plusButtonIcon(MouseEvent event) {
+    void returnToMenu(MouseEvent event) {
 
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PromptUser.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
 
             Stage primaryStage = new Stage();
             Scene scene = new Scene(root);
@@ -54,25 +51,8 @@ public class MenuController {
     }
 
     @FXML
-    void viewOptionsForFilter(MouseEvent event) {
+    void selectImage(MouseEvent event) {
 
-    }
-
-    @FXML
-    void viewOptionsForThreeLines(MouseEvent event) {
-
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Profile.fxml")));
-
-            Stage primaryStage = new Stage();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.initModality(Modality.NONE);
-            primaryStage.show();
-        } catch (IOException e) {
-
-            e.printStackTrace();
-        }
     }
 
 }

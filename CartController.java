@@ -1,3 +1,4 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,19 +12,19 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class MenuController {
+public class CartController {
 
     @FXML
-    private ScrollPane menuPane;
+    private ScrollPane cartList;
 
     @FXML
-    private TextField searchedItem;
+    private TextField couponCodeInput;
 
     @FXML
-    void accessCart(MouseEvent event) {
+    void checkOut(ActionEvent event) {
 
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Cart.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("CheckOut.fxml")));
 
             Stage primaryStage = new Stage();
             Scene scene = new Scene(root);
@@ -37,32 +38,10 @@ public class MenuController {
     }
 
     @FXML
-    void plusButtonIcon(MouseEvent event) {
+    void returnToMenu(MouseEvent event) {
 
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PromptUser.fxml")));
-
-            Stage primaryStage = new Stage();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.initModality(Modality.NONE);
-            primaryStage.show();
-        } catch (IOException e) {
-
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    void viewOptionsForFilter(MouseEvent event) {
-
-    }
-
-    @FXML
-    void viewOptionsForThreeLines(MouseEvent event) {
-
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Profile.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
 
             Stage primaryStage = new Stage();
             Scene scene = new Scene(root);

@@ -1,8 +1,8 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
@@ -11,16 +11,42 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class MenuController {
+public class CheckOutController {
 
     @FXML
-    private ScrollPane menuPane;
+    private TextField cardName;
 
     @FXML
-    private TextField searchedItem;
+    private TextField cardNumber;
 
     @FXML
-    void accessCart(MouseEvent event) {
+    private TextField contactInfoInput;
+
+    @FXML
+    private TextField cvcInput;
+
+    @FXML
+    private TextField expCard;
+
+    @FXML
+    void confirmPayment(ActionEvent event) {
+
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Success.fxml")));
+
+            Stage primaryStage = new Stage();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.initModality(Modality.NONE);
+            primaryStage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void returnToCart(MouseEvent event) {
 
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Cart.fxml")));
@@ -37,42 +63,13 @@ public class MenuController {
     }
 
     @FXML
-    void plusButtonIcon(MouseEvent event) {
-
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PromptUser.fxml")));
-
-            Stage primaryStage = new Stage();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.initModality(Modality.NONE);
-            primaryStage.show();
-        } catch (IOException e) {
-
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    void viewOptionsForFilter(MouseEvent event) {
+    void saveCardInfo(ActionEvent event) {
 
     }
 
     @FXML
-    void viewOptionsForThreeLines(MouseEvent event) {
+    void saveContactInfo(ActionEvent event) {
 
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Profile.fxml")));
-
-            Stage primaryStage = new Stage();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.initModality(Modality.NONE);
-            primaryStage.show();
-        } catch (IOException e) {
-
-            e.printStackTrace();
-        }
     }
 
 }
