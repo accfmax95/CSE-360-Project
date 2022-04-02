@@ -31,5 +31,10 @@
       <Separator layoutX="39.0" layoutY="73.0" prefHeight="6.0" prefWidth="258.0" />
       <Separator layoutX="39.0" layoutY="481.0" prefHeight="6.0" prefWidth="258.0" />
       <ScrollPane layoutX="41.0" layoutY="147.0" prefHeight="307.0" prefWidth="258.0" />
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="28.0" layoutY="33.0" onMouseClicked="#returnToPrompt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@24740_1000.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
