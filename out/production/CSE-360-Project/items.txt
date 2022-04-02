@@ -1,0 +1,18 @@
+Hamburger,6.99,Hamburger Bun,Beef Patty,Lettuce,Tomato,Onion
+Cheeseburger,7.99,Hamburger Bun,Beef Patty,Cheese,Lettuce,Tomato,Onion
+Grilled Cheese,3.49,Bread,Cheese,Butter
+Chicken Strips,6.99,Chicken,Bread Crumbs,Flour,Egg
+Chicken Sandwich,6.99,Hamburger Bun,Chicken,Pickle,Spicy Mayo
+French Fries,1.99,Potatoes,Salt,Frying Oil
+Nachos,7.99,Tortilla Chips,Ground Beef,Cheese,Tomato,Beans,Onions,Guacamole,Sour Cream
+Fettuccine Alfredo,7.99,Pasta,Heavy Cream,Cheese,Butter,Salt
+Lasagna,8.99,Ground Beef,Noodles,Onlon,Garlic,Tomato Sauce,Cheese,Basil,Salt
+Quiche,7.49,Pie Crust,Onion,Egg,Spinach,Cheese,Heavy Cream,Salt
+Pho,6.49,Noodles,Beef,Onion,Broth,Bean Sprouts,Hoisin Sauce,Sriracha,Basil,Mint
+Chicken Katsu,5.99,Chicken,Rice,Flour,Egg,Bread Crumbs,Frying Oil,Tonkatsu Sauce
+Fish and Chips,5.99,Cod,Flour,Salt,Batter,Potatoes,Frying Oil
+Pork Schnitzel,6.99,Pork,Flour,Eggs,Paprika,Bread Crumbs,Lemon,Frying Oil
+Chicken Tikka Masala,6.49,Chicken,Garlic,Spices,Salt,Heavy Cream,Cilantro,Rice,Butter
+Lamb Gyros,7.99,Lamb,Yogurt,Garlic,Vinegar,Lemon,Cucumber,Flatbread,Oregano
+Pork Dumplings,5.99,Pork,Dough,Cabbage,Vegetable Oil,Soy Sauce,Seasame Oil,Egg,Ginger
+Coconut Shrimp,8.99,Shrimp,Coconut,Egg,Flour,Bread Crumbs,Vegetable Oil,Chili Sauce
