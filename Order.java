@@ -39,6 +39,10 @@ public class Order {
         return orderPrice;
     }
 
+    public void setOrderPrice(double newPrice) {
+        this.orderPrice = newPrice;
+    }
+
     public int getEstimatedTime() {
         return estimatedTime;
     }
