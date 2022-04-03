@@ -18,19 +18,19 @@ public class test {
         LinkedList<String> ing = new LinkedList<>();
         ing.add("Beans");
         ing.add("Cheese");
-        Item item1 = new Item("Burrito", ing, 10.00);
+        Item item1 = new Item("Burrito", ing, 10.00, 2);
 
         ing = new LinkedList<>();
         ing.add("Bread");
         ing.add("Peanut Butter");
         ing.add("Jelly");
-        Item item2 = new Item("PBJ", ing, 3.20);
+        Item item2 = new Item("PBJ", ing, 3.20, 2);
 
         ing = new LinkedList<>();
         ing.add("Pepporoni");
         ing.add("Cheese");
         ing.add("Ham");
-        Item item3 = new Item("Pizza", ing, 12.25);
+        Item item3 = new Item("Pizza", ing, 12.25, 15);
 
         //add items to customer cart
         user.addItemToCart(item1);
@@ -47,7 +47,7 @@ public class test {
         System.out.println(user.toString());
 
         //create order
-        user.sendCartToOrder();
+        user.sendCartToOrder(false);
 
         //set customer credit card info
         CreditCard newCard = new CreditCard("cardName", "1/1/22", "11248274121", 123);
@@ -67,7 +67,7 @@ public class test {
         ing.add("Sour Cream");
         ing.add("Guac");
         ing.add("Salsa");
-        Item item4 = new Item("Nachos", ing, 9.99);
+        Item item4 = new Item("Nachos", ing, 9.99, 8);
 
         ing = new LinkedList<>();
         ing.add("Pasta Sauce");
@@ -75,13 +75,13 @@ public class test {
         ing.add("Seasoning");
         ing.add("Parmesean Cheese");
         ing.add("Angel Hair Pasta");
-        Item item5 = new Item("Spaghetti", ing, 13.50);
+        Item item5 = new Item("Spaghetti", ing, 13.50, 13);
 
         ing = new LinkedList<>();
         ing.add("Chicken");
         ing.add("Sauce");
         ing.add("Fried Rice");
-        Item item6 = new Item("Orange Chicken and Rice", ing , 8.25);
+        Item item6 = new Item("Orange Chicken and Rice", ing , 8.25, 5);
 
         //add items to user2 cart
         user2.addItemToCart(item4);
@@ -96,8 +96,8 @@ public class test {
         user.addItemToCart(item5);
 
         //create orders for each user
-        user2.sendCartToOrder();
-        user.sendCartToOrder();
+        user2.sendCartToOrder(false);
+        user.sendCartToOrder(false);
 
         //print user to strings to see orders
         user.printOrders();

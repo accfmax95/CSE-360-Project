@@ -5,7 +5,7 @@ public class Customer extends User {
     //member variables
     private CreditCard creditCard;
     private boolean isFrequent;
-    private double couponPrice;
+    private double couponDiscount = 0;
     private int numberOfOrders = 0;
     private LinkedList<Order> orders;
     private LinkedList<Item> curCart;
@@ -40,17 +40,14 @@ public class Customer extends User {
         return isFrequent;
     }
 
-    public void applyCoupon(double couponDiscount) {
-        if (orders.peek() != null) {
-            Order tempOrder = orders.remove();
-            double oldPrice = tempOrder.getOrderPrice();
-            double newPrice = oldPrice - couponDiscount;
-            if (newPrice < 0) {
-                newPrice = 0;
-            }
-            Order modifiedOrder = new Order(tempOrder.getShoppingCart(), newPrice, tempOrder.getEstimatedTime(), tempOrder.getUsersAhead());
-            orders.add(modifiedOrder);
-        }
+    public void setCouponDiscount(double discount) {
+        couponDiscount = discount;
+    }
+
+    public void applyCoupon(Order order) {
+        double newPrice = order.getOrderPrice() - this.couponDiscount;
+        this.couponDiscount = 0;
+        order.setOrderPrice(newPrice);
     }
     public int getNumberOfOrders() {
         return this.numberOfOrders;
@@ -91,7 +88,7 @@ public class Customer extends User {
     }
 
     //this function empties what is currently in the cart and creates an order which is added to the list of user orders
-    public void sendCartToOrder() {
+    public void sendCartToOrder(boolean applyCoupon) {
         int timeToComplete = 0;
         double cartPrice = this.getCartPrice();
         String price = this.getCartPriceCurrency();
@@ -106,6 +103,9 @@ public class Customer extends User {
         //each time order is created, estimated time is increased by 10
         //users ahead increased by 1
         usersAhead = usersAhead + 1;
+        if (applyCoupon == true) {
+            applyCoupon(order);
+        }
         orders.add(order);
         System.out.println("\nOrder id "+ order.getOrderId() + " made by " + this.getUsername() + " totalling " + price + " processed\n");
         numberOfOrders++;

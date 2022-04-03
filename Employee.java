@@ -15,4 +15,9 @@ public class Employee extends User {
     public void removeItemFromMenu(Item item) {
         //----
     }
+    public void addCoupon(Customer customer) {
+        if (customer.getNumberOfOrders() >= 3) {
+            customer.setCouponDiscount(10);
+        }
+    }
 }
