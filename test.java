@@ -14,6 +14,8 @@ public class test {
         System.out.println();
         System.out.println(user.toString());
 
+        Menu menu = new Menu();
+
         //TEST Items
         LinkedList<String> ing = new LinkedList<>();
         ing.add("Beans");

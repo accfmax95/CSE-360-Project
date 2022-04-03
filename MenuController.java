@@ -24,6 +24,7 @@ public class MenuController {
     @FXML
     private TextField searchedItem;
 
+
     @FXML
     void accessCart(MouseEvent event) {
 
@@ -76,34 +77,6 @@ public class MenuController {
             primaryStage.show();
         } catch (IOException e) {
 
-            e.printStackTrace();
-        }
-    }
-
-    //fill Menu
-    public void fillMenu() throws IOException {
-        LinkedList<Item> inventory = new LinkedList<>();
-        LinkedList<String> tempIngredients = new LinkedList<>();
-        File file = new File("items.txt");
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String st;
-            while ((st = br.readLine()) != null) {
-                //split the string
-                String[] stringarray = st.split(":");
-                String name = stringarray[0];
-                double price = Double.parseDouble(stringarray[1]);
-                String[] ingredients = stringarray[2].split(",");
-                for (int i = 0; i < ingredients.length; i++) {
-                    tempIngredients.add(ingredients[i]);
-                }
-                int time = Integer.parseInt(stringarray[3]);
-
-                Item tempItem = new Item(name, price, tempIngredients, time);
-                inventory.add(tempItem);
-                tempIngredients = null;
-            }
-        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
