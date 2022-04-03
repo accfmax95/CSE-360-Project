@@ -5,6 +5,7 @@ public class Customer extends User {
     //member variables
     private CreditCard creditCard;
     private boolean isFrequent;
+    private double couponPrice;
     private LinkedList<Order> orders;
     private LinkedList<Item> curCart;
 
@@ -37,7 +38,17 @@ public class Customer extends User {
     public boolean isFrequent() {
         return isFrequent;
     }
-
+    
+    public void applyCoupon(double couponDiscount) {
+        Order tempOrder = orders.remove();
+        double oldPrice = tempOrder.getOrderPrice();
+        double newPrice = oldPrice - couponDiscount;
+        if (newPrice < 0) {
+            newPrice = 0;
+        }
+        Order modifiedOrder = new Order(tempOrder.getShoppingCart(), newPrice, tempOrder.getEstimatedTime(), tempOrder.getUsersAhead());
+        orders.add(modifiedOrder);
+    }
     //adds item to user's cart
     public void addItemToCart(Item newItem) {
         curCart.add(newItem);
