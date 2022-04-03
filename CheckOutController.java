@@ -151,6 +151,29 @@ public class CheckOutController
     			write.write(phNum);
     			write.write("\n");
     			write.close();
+    			
+    			//save for permanent use
+    			String fileName = user + "PhoneInfo.txt";
+    			File contact = new File(fileName);
+    			if(contact.exists() == false)
+    			{
+    				FileWriter writer = new FileWriter(fileName);
+    				writer.write(user);
+    				writer.write("\n");
+    				writer.write(phNum);
+    				writer.write("\n");
+    				writer.close();
+    			}
+    			else
+    			{
+    				contact.delete();
+    				FileWriter writer = new FileWriter(fileName);
+    				writer.write(user);
+    				writer.write("\n");
+    				writer.write(phNum);
+    				writer.write("\n");
+    				writer.close();
+    			}
     		}
     		else
     		{

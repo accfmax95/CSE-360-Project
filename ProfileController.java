@@ -1,5 +1,3 @@
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -80,6 +78,20 @@ public class ProfileController implements Initializable {
             String user = reader.nextLine();
             String pass = reader.nextLine();
             String phNum = reader.nextLine();
+            
+            String fileName = user + "PhoneInfo.txt";
+            File contact = new File(fileName);
+            if(contact.exists() == true)
+            {
+            	try {
+					reader = new Scanner(contact);
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            	user = reader.nextLine();
+            	phNum = reader.nextLine();
+            }
 
             userName.setText(user);
             phoneNumber.setText(phNum);
