@@ -23,6 +23,14 @@ public class Order {
         orderId++;
     }
 
+    public LinkedList<Item> getShoppingCart() {
+        return shoppingCart;
+    }
+
+    public void setShoppingCart(LinkedList<Item> shoppingCart) {
+        this.shoppingCart = shoppingCart;
+    }
+
     public int getOrderId() {
         return curOrderId;
     }
