@@ -1,6 +1,9 @@
+
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,29 +12,28 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
+import java.util.Scanner;
 
-public class ProfileController {
+public class ProfileController implements Initializable {
 
     @FXML
-    private Label phoneNumber;
+    private Label phoneNumber =  new Label();
 
     @FXML
     private ScrollPane previousOrders;
 
-    @FXML 
-    private Label userName;
-    
-    public static Label userName2 = new Label();
+    @FXML
+    private Label userName = new Label();
 
-    void Enter()
-    {
-    	userName = userName2;
-    }
-    
     @FXML
     void returnToMenu(MouseEvent event) {
+
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
 
@@ -48,6 +50,7 @@ public class ProfileController {
 
     @FXML
     void signOutButton(ActionEvent event) {
+
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SignIn.fxml")));
 
@@ -62,4 +65,31 @@ public class ProfileController {
         }
     }
 
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        File file = new File("CurrentUser.txt");
+        if(file.exists())
+        {
+            Scanner reader = null;
+            try {
+                reader = new Scanner(file);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            String user = reader.nextLine();
+            String pass = reader.nextLine();
+            String phNum = reader.nextLine();
+
+            userName.setText(user);
+            phoneNumber.setText(phNum);
+
+            //phoneNumber.setText(phNum);
+        }
+        else
+        {
+            System.out.println("Failed to Load User Data");
+            //print an error message
+        }
+    }
 }

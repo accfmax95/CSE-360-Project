@@ -74,29 +74,7 @@ public class MenuController extends ProfileController{
             primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
             
             Scene scene = new Scene(root);
-            
             primaryStage.setScene(scene);
-            
-            File file = new File("CurrentUser.txt");
-            if(file.exists())
-            {
-            	Scanner reader = new Scanner(file);
-            	String user = reader.nextLine();
-            	String pass = reader.nextLine();
-            	String phNum = reader.nextLine();
-            	System.out.println(user);
-            	System.out.println(phNum);
-            	
-            	userName2.setText(user);
-            	Enter();
-            
-            	//phoneNumber.setText(phNum);
-            }
-            else
-            {
-            	System.out.println("Failed to Load User Data");
-            		//print an error message
-            }
             primaryStage.show();
             
             
