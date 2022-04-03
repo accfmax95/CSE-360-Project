@@ -114,8 +114,13 @@ public class CheckOutController
         	}
         	else
         	{
-        		System.out.println("There was an error grabbing user data");
-        		//print an error message
+        		  Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GrabDataError.fxml")));
+
+                  Stage primaryStage = new Stage();
+                  Scene scene = new Scene(root);
+                  primaryStage.setScene(scene);
+                  primaryStage.initModality(Modality.NONE);
+                  primaryStage.show();
         	}
 
     	}
@@ -149,8 +154,13 @@ public class CheckOutController
     		}
     		else
     		{
-    			System.out.println("There was an error grabbing user data");
-        		//print an error message
+    			  Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GrabDataError.fxml")));
+
+    	            Stage primaryStage = new Stage();
+    	            Scene scene = new Scene(root);
+    	            primaryStage.setScene(scene);
+    	            primaryStage.initModality(Modality.NONE);
+    	            primaryStage.show();
     		}
     	}
     	catch(Exception e)
