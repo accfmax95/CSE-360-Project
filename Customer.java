@@ -41,14 +41,16 @@ public class Customer extends User {
     }
 
     public void applyCoupon(double couponDiscount) {
-        Order tempOrder = orders.remove();
-        double oldPrice = tempOrder.getOrderPrice();
-        double newPrice = oldPrice - couponDiscount;
-        if (newPrice < 0) {
-            newPrice = 0;
+        if (orders.peek() != null) {
+            Order tempOrder = orders.remove();
+            double oldPrice = tempOrder.getOrderPrice();
+            double newPrice = oldPrice - couponDiscount;
+            if (newPrice < 0) {
+                newPrice = 0;
+            }
+            Order modifiedOrder = new Order(tempOrder.getShoppingCart(), newPrice, tempOrder.getEstimatedTime(), tempOrder.getUsersAhead());
+            orders.add(modifiedOrder);
         }
-        Order modifiedOrder = new Order(tempOrder.getShoppingCart(), newPrice, tempOrder.getEstimatedTime(), tempOrder.getUsersAhead());
-        orders.add(modifiedOrder);
     }
     public int getNumberOfOrders() {
         return this.numberOfOrders;
