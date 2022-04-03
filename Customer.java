@@ -6,6 +6,7 @@ public class Customer extends User {
     private CreditCard creditCard;
     private boolean isFrequent;
     private double couponPrice;
+    private int numberOfOrders = 0;
     private LinkedList<Order> orders;
     private LinkedList<Item> curCart;
 
@@ -38,7 +39,7 @@ public class Customer extends User {
     public boolean isFrequent() {
         return isFrequent;
     }
-    
+
     public void applyCoupon(double couponDiscount) {
         Order tempOrder = orders.remove();
         double oldPrice = tempOrder.getOrderPrice();
@@ -48,6 +49,9 @@ public class Customer extends User {
         }
         Order modifiedOrder = new Order(tempOrder.getShoppingCart(), newPrice, tempOrder.getEstimatedTime(), tempOrder.getUsersAhead());
         orders.add(modifiedOrder);
+    }
+    public int getNumberOfOrders() {
+        return this.numberOfOrders;
     }
     //adds item to user's cart
     public void addItemToCart(Item newItem) {
@@ -102,6 +106,7 @@ public class Customer extends User {
         usersAhead = usersAhead + 1;
         orders.add(order);
         System.out.println("\nOrder id "+ order.getOrderId() + " made by " + this.getUsername() + " totalling " + price + " processed\n");
+        numberOfOrders++;
     }
 
     //returns orders
