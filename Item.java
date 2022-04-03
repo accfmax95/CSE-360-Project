@@ -7,13 +7,15 @@ public class Item {
     private LinkedList<String> ingredients;
     private double itemPrice;
     private int timeToComplete;
+    private String image;
 
     //constructor
-    public Item(String itemName, double itemPrice, LinkedList<String> ingredients,  int timeToComplete) {
+    public Item(String itemName, double itemPrice, LinkedList<String> ingredients,  int timeToComplete, String image) {
         this.itemName = itemName;
         this.ingredients = ingredients;
         this.itemPrice = itemPrice;
         this.timeToComplete = timeToComplete;
+        this.image = image;
     }
 
     //set item name
@@ -55,6 +57,14 @@ public class Item {
 
     public void setTimeToComplete(int timeToComplete) {
         this.timeToComplete = timeToComplete;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String toString() {
