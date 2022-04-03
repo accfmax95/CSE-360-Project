@@ -13,9 +13,9 @@
          </font>
       </Text>
       <Separator layoutX="31.0" layoutY="68.0" prefHeight="15.0" prefWidth="274.0" />
-      <Text layoutX="41.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You are not allowed to access this page." textAlignment="CENTER" wrappingWidth="253.67498779296875">
+      <Text layoutX="31.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There was a problem with you signing in. Make sure you have a valid username and password!" textAlignment="CENTER" wrappingWidth="259.67498779296875">
          <font>
-            <Font name="Heiti TC Light" size="35.0" />
+            <Font name="Heiti TC Light" size="29.0" />
          </font>
       </Text>
    </children>

@@ -13,7 +13,7 @@
          </font>
       </Text>
       <Separator layoutX="31.0" layoutY="68.0" prefHeight="15.0" prefWidth="274.0" />
-      <Text layoutX="41.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You are not allowed to access this page." textAlignment="CENTER" wrappingWidth="253.67498779296875">
+      <Text layoutX="67.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unable to grab the user's data." textAlignment="CENTER" wrappingWidth="187.67498779296875">
          <font>
             <Font name="Heiti TC Light" size="35.0" />
          </font>

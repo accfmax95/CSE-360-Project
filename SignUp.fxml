@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpController">
    <children>
       <Button layoutX="47.0" layoutY="336.0" mnemonicParsing="false" onAction="#signUp" prefHeight="56.0" prefWidth="242.0" style="-fx-background-color: FF4233;" text="Continue" textFill="WHITE">
@@ -37,7 +36,7 @@
             <Font name="Heiti TC Light" size="26.0" />
          </font>
       </Text>
-      <CheckBox layoutX="47.0" layoutY="282.0" mnemonicParsing="false" text="I agree to the" wrapText="true" />
+      <CheckBox layoutX="47.0" layoutY="282.0" mnemonicParsing="false" onAction="#agreeToTOS" text="I agree to the" wrapText="true" />
       <Text fill="#f53e3e" layoutX="140.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Terms of Services" />
       <Text layoutX="248.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and" />
       <Text fill="#f53e3e" layoutX="73.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="privacy policy" />
