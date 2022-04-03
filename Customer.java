@@ -75,16 +75,19 @@ public class Customer extends User {
 
     //this function empties what is currently in the cart and creates an order which is added to the list of user orders
     public void sendCartToOrder() {
+        int timeToComplete = 0;
+        double cartPrice = this.getCartPrice();
         String price = this.getCartPriceCurrency();
         LinkedList<Item> temp = new LinkedList<>();
         while (!curCart.isEmpty()) {
             Item tempItem = curCart.remove();
+            timeToComplete = timeToComplete + tempItem.getTimeToComplete();
             temp.add(tempItem);
         }
-        Order order = new Order(temp, this.getCartPrice(), estimatedTime, usersAhead);
+        estimatedTime = estimatedTime + timeToComplete;
+        Order order = new Order(temp, cartPrice, estimatedTime, usersAhead);
         //each time order is created, estimated time is increased by 10
         //users ahead increased by 1
-        estimatedTime = estimatedTime + 10;
         usersAhead = usersAhead + 1;
         orders.add(order);
         System.out.println("\nOrder id "+ order.getOrderId() + " made by " + this.getUsername() + " totalling " + price + " processed\n");
