@@ -17,6 +17,14 @@ public class Menu {
 
     }
 
+    public LinkedList<Item> getMenuItems() {
+        return menuItems;
+    }
+
+    public void setMenuItems(LinkedList<Item> menuItems) {
+        this.menuItems = menuItems;
+    }
+
     public void fillMenuList() throws IOException {
         File file = new File("items.txt");
 
@@ -37,12 +45,13 @@ public class Menu {
                 }
 
                 time = Integer.parseInt(stringarray[3]);
-                Item tempItem = new Item(name, price, tempIngredients, time);
+                Item tempItem = new Item(name, price, tempIngredients, time, "/");
                 this.menuItems.add(tempItem);
             }
         } catch (FileNotFoundException var12) {
             var12.printStackTrace();
         }
+
 
     }
 }
