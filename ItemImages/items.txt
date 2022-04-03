@@ -1,0 +1,18 @@
+Hamburger:6.99:Hamburger Bun,Beef Patty,Lettuce,Tomato,Onion:5:ItemImages\Hamburger.jpg
+Cheeseburger:7.99:Hamburger Bun,Beef Patty,Cheese,Lettuce,Tomato,Onion:5:ItemImages\Cheeseburger.jpg
+Grilled Cheese:3.49:Bread,Cheese,Butter:3:ItemImages\Grilled Cheese.jpg
+Chicken Strips:6.99:Chicken,Bread Crumbs,Flour,Egg:4:ItemImages\Chicken Strips.jpg
+Chicken Sandwich:6.99:Hamburger Bun,Chicken,Pickle,Spicy Mayo:4:ItemImages\Chicken Sandwich.jpg
+French Fries:1.99:Potatoes,Salt,Oil:2:ItemImages\French Fries.jpg
+Nachos:7.99:Tortilla Chips,Ground Beef,Cheese,Tomato,Beans,Onions,Guacamole,Sour Cream:4:ItemImages\Nachos.jpg
+Fettuccine Alfredo:7.99:Pasta,Heavy Cream,Cheese,Butter,Salt:7:ItemImages\Fettuccine Alfredo.jpg
+Lasagna:8.99:Ground Beef,Noodles,Onlon,Garlic,Tomato Sauce,Cheese,Basil,Salt:9:ItemImages\Lasagna.jpg
+Quiche:7.49:Pie Crust,Onion,Egg,Spinach,Cheese,Heavy Cream,Salt:5:ItemImages\Quiche.jpg
+Pho:6.49:Noodles,Beef,Onion,Broth,Bean Sprouts,Hoisin Sauce,Sriracha,Basil,Mint:8:ItemImages\Pho.jpg
+Chicken Katsu:5.99:Chicken,Rice,Flour,Egg,Bread Crumbs,Oil,Tonkatsu Sauce:4:ItemImages\Chicken Katsu.jpg
+Fish and Chips:5.99:Cod,Flour,Salt,Batter,Potatoes,Oil:4:ItemImages\Fish and Chips.jpg
+Pork Schnitzel:6.99:Pork,Flour,Egg,Paprika,Bread Crumbs,Lemon,Oil:5:ItemImages\Pork Schnitzel.jpg
+Chicken Tikka Masala:6.49:Chicken,Garlic,Spices,Salt,Heavy Cream,Cilantro,Rice,Butter:5:ItemImages\Chicken Tikka Masala.jpg
+Lamb Gyros:7.99:Lamb,Yogurt,Garlic,Vinegar,Lemon,Cucumber,Flatbread,Oregano:4:ItemImages\Lamb Gyros.jpg
+Pork Dumplings:5.99:Pork,Dough,Cabbage,Oil,Soy Sauce,Egg,Ginger:6:ItemImages\Pork Dumplings.jpg
+Coconut Shrimp:8.99:Shrimp,Coconut,Egg,Flour,Bread Crumbs,Chili Sauce,Oil:8:ItemImages\Coconut Shrimp.jpg
