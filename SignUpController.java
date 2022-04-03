@@ -65,7 +65,7 @@ public class SignUpController {
                 {
                     String uIn = reader.nextLine();
                     String pIn = reader.nextLine();
-                    if(uIn.equals(userInput.getText()) && pIn.equals(passInput.getText()))
+                    if(uIn.equals(userInput.getText()))
                     {
                         success = true;
                         break;
