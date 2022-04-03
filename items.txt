@@ -1,18 +1,18 @@
-Hamburger,6.99,Hamburger Bun,Beef Patty,Lettuce,Tomato,Onion
-Cheeseburger,7.99,Hamburger Bun,Beef Patty,Cheese,Lettuce,Tomato,Onion
-Grilled Cheese,3.49,Bread,Cheese,Butter
-Chicken Strips,6.99,Chicken,Bread Crumbs,Flour,Egg
-Chicken Sandwich,6.99,Hamburger Bun,Chicken,Pickle,Spicy Mayo
-French Fries,1.99,Potatoes,Salt,Frying Oil
-Nachos,7.99,Tortilla Chips,Ground Beef,Cheese,Tomato,Beans,Onions,Guacamole,Sour Cream
-Fettuccine Alfredo,7.99,Pasta,Heavy Cream,Cheese,Butter,Salt
-Lasagna,8.99,Ground Beef,Noodles,Onlon,Garlic,Tomato Sauce,Cheese,Basil,Salt
-Quiche,7.49,Pie Crust,Onion,Egg,Spinach,Cheese,Heavy Cream,Salt
-Pho,6.49,Noodles,Beef,Onion,Broth,Bean Sprouts,Hoisin Sauce,Sriracha,Basil,Mint
-Chicken Katsu,5.99,Chicken,Rice,Flour,Egg,Bread Crumbs,Frying Oil,Tonkatsu Sauce
-Fish and Chips,5.99,Cod,Flour,Salt,Batter,Potatoes,Frying Oil
-Pork Schnitzel,6.99,Pork,Flour,Eggs,Paprika,Bread Crumbs,Lemon,Frying Oil
-Chicken Tikka Masala,6.49,Chicken,Garlic,Spices,Salt,Heavy Cream,Cilantro,Rice,Butter
-Lamb Gyros,7.99,Lamb,Yogurt,Garlic,Vinegar,Lemon,Cucumber,Flatbread,Oregano
-Pork Dumplings,5.99,Pork,Dough,Cabbage,Vegetable Oil,Soy Sauce,Seasame Oil,Egg,Ginger
-Coconut Shrimp,8.99,Shrimp,Coconut,Egg,Flour,Bread Crumbs,Vegetable Oil,Chili Sauce
+Hamburger:6.99:Hamburger Bun,Beef Patty,Lettuce,Tomato,Onion:5
+Cheeseburger:7.99:Hamburger Bun,Beef Patty,Cheese,Lettuce,Tomato,Onion:5
+Grilled Cheese:3.49:Bread,Cheese,Butter:3
+Chicken Strips:6.99:Chicken,Bread Crumbs,Flour,Egg:4
+Chicken Sandwich:6.99:Hamburger Bun,Chicken,Pickle,Spicy Mayo:4
+French Fries:1.99:Potatoes,Salt,Oil:2
+Nachos:7.99:Tortilla Chips,Ground Beef,Cheese,Tomato,Beans,Onions,Guacamole,Sour Cream:4
+Fettuccine Alfredo:7.99:Pasta,Heavy Cream,Cheese,Butter,Salt:7
+Lasagna:8.99:Ground Beef,Noodles,Onlon,Garlic,Tomato Sauce,Cheese,Basil,Salt:9
+Quiche:7.49:Pie Crust,Onion,Egg,Spinach,Cheese,Heavy Cream,Salt:5
+Pho:6.49:Noodles,Beef,Onion,Broth,Bean Sprouts,Hoisin Sauce,Sriracha,Basil,Mint:8
+Chicken Katsu:5.99:Chicken,Rice,Flour,Egg,Bread Crumbs,Oil,Tonkatsu Sauce:4
+Fish and Chips:5.99:Cod,Flour,Salt,Batter,Potatoes,Oil:4
+Pork Schnitzel:6.99:Pork,Flour,Egg,Paprika,Bread Crumbs,Lemon,Oil:5
+Chicken Tikka Masala:6.49:Chicken,Garlic,Spices,Salt,Heavy Cream,Cilantro,Rice,Butter:5
+Lamb Gyros:7.99:Lamb,Yogurt,Garlic,Vinegar,Lemon,Cucumber,Flatbread,Oregano:4
+Pork Dumplings:5.99:Pork,Dough,Cabbage,Oil,Soy Sauce,Egg,Ginger:6
+Coconut Shrimp:8.99:Shrimp,Coconut,Egg,Flour,Bread Crumbs,Chili Sauce,Oil:8
