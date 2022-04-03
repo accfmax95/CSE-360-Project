@@ -72,7 +72,7 @@ public class SignUpController {
                     }
                 }
 
-                if(success == false)
+                if(success == false && check == true)
                 {
                     FileWriter file = new FileWriter("SignUpData.txt", true);
                     file.write(userInput.getText());
@@ -85,23 +85,31 @@ public class SignUpController {
                 }
                 else
                 {
-                	Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AlreadyRegisteredError.fxml")));
+                	if(success == true)
+                	{
+                		Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AlreadyRegisteredError.fxml")));
 
-                    Stage primaryStage = new Stage();
-                    Scene scene = new Scene(root);
-                    primaryStage.setScene(scene);
-                    primaryStage.initModality(Modality.NONE);
-                    primaryStage.show();                }
+                        Stage primaryStage = new Stage();
+                        Scene scene = new Scene(root);
+                        primaryStage.setScene(scene);
+                        primaryStage.initModality(Modality.NONE);
+                        primaryStage.show();                
+
+                	}
+                }
             }
             else
             {
-                FileWriter file = new FileWriter("SignUpData.txt");
-                file.write(userInput.getText());
-                file.write("\n");
-                file.write(passInput.getText());
-                file.write("\n");
-                write = true;
-                file.close();
+            	if(check == true)
+            	{
+            		FileWriter file = new FileWriter("SignUpData.txt");
+                    file.write(userInput.getText());
+                    file.write("\n");
+                    file.write(passInput.getText());
+                    file.write("\n");
+                    write = true;
+                    file.close();
+            	}
             }
 
             if(write == true && check == true)
@@ -114,21 +122,20 @@ public class SignUpController {
                 primaryStage.setScene(scene);
                 primaryStage.show();
 
-            } else {
-
-                try {
-                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SignUpError.fxml")));
+            }
+            else
+            {
+            	if(check == false)
+            	{
+            		Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SignUpError.fxml")));
 
                     Stage primaryStage = new Stage();
                     Scene scene = new Scene(root);
                     primaryStage.setScene(scene);
                     primaryStage.initModality(Modality.NONE);
                     primaryStage.show();
-                } catch (IOException e) {
 
-                    e.printStackTrace();
-                }
-
+            	}
             }
 
         }
