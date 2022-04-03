@@ -4,11 +4,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,17 +15,23 @@ import java.util.Objects;
 public class ProfileController {
 
     @FXML
-    private PasswordField phoneNumber;
+    private Label phoneNumber;
 
     @FXML
     private ScrollPane previousOrders;
 
-    @FXML
-    private TextField userName;
+    @FXML 
+    private Label userName;
+    
+    public static Label userName2 = new Label();
 
+    void Enter()
+    {
+    	userName = userName2;
+    }
+    
     @FXML
     void returnToMenu(MouseEvent event) {
-
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
 
@@ -44,7 +48,6 @@ public class ProfileController {
 
     @FXML
     void signOutButton(ActionEvent event) {
-
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SignIn.fxml")));
 

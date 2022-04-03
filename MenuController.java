@@ -1,29 +1,29 @@
-import com.sun.xml.internal.messaging.saaj.packaging.mime.util.LineInputStream;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import sun.awt.image.ImageWatched;
 
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.util.LinkedList;
+import javafx.scene.control.Label;
+import java.io.File;
+import java.io.IOException;
 import java.util.Objects;
+import java.util.Scanner;
 
-public class MenuController {
+public class MenuController extends ProfileController{
 
     @FXML
     private ScrollPane menuPane;
 
     @FXML
     private TextField searchedItem;
-
 
     @FXML
     void accessCart(MouseEvent event) {
@@ -72,9 +72,34 @@ public class MenuController {
 
             Stage primaryStage = new Stage();
             primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            
             Scene scene = new Scene(root);
+            
             primaryStage.setScene(scene);
+            
+            File file = new File("CurrentUser.txt");
+            if(file.exists())
+            {
+            	Scanner reader = new Scanner(file);
+            	String user = reader.nextLine();
+            	String pass = reader.nextLine();
+            	String phNum = reader.nextLine();
+            	System.out.println(user);
+            	System.out.println(phNum);
+            	
+            	userName2.setText(user);
+            	Enter();
+            
+            	//phoneNumber.setText(phNum);
+            }
+            else
+            {
+            	System.out.println("Failed to Load User Data");
+            		//print an error message
+            }
             primaryStage.show();
+            
+            
         } catch (IOException e) {
 
             e.printStackTrace();
