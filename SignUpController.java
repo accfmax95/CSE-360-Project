@@ -85,9 +85,13 @@ public class SignUpController {
                 }
                 else
                 {
-                    System.out.println("The user is already registered");
-                    //The user is already registered
-                }
+                	Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AlreadyRegisteredError.fxml")));
+
+                    Stage primaryStage = new Stage();
+                    Scene scene = new Scene(root);
+                    primaryStage.setScene(scene);
+                    primaryStage.initModality(Modality.NONE);
+                    primaryStage.show();                }
             }
             else
             {

@@ -94,8 +94,13 @@ public class SignInController
         	}
         	else
         	{
-        		System.out.println("Please enter a valid ID and password");
-        		//print an error message
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ValidSignUpError.fxml")));
+
+                Stage primaryStage = new Stage();
+                Scene scene = new Scene(root);
+                primaryStage.setScene(scene);
+                primaryStage.initModality(Modality.NONE);
+                primaryStage.show();
         	}
    }
         catch (IOException e) 

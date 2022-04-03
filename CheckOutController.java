@@ -103,8 +103,13 @@ public class CheckOutController
         		}
         		else
         		{
-        			System.out.println("Card Data already saved");
-        			//print an error message
+        			 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("CardDataAlreadySavedError.fxml")));
+
+                     Stage primaryStage = new Stage();
+                     Scene scene = new Scene(root);
+                     primaryStage.setScene(scene);
+                     primaryStage.initModality(Modality.NONE);
+                     primaryStage.show();
         		}
         	}
         	else
@@ -128,7 +133,6 @@ public class CheckOutController
     		File file = new File("CurrentUser.txt");
     		if(file.exists())
     		{
-    			System.out.println("Done");
     			Scanner reader = new Scanner(file);
     			String user = reader.nextLine();
     			String pass = reader.nextLine();
