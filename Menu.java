@@ -37,15 +37,12 @@ public class Menu {
                 String[] stringarray = st.split(":");
                 String name = stringarray[0];
                 double price = Double.parseDouble(stringarray[1]);
-                String[] ingredients = stringarray[2].split(",");
+                String ingredients = stringarray[2];
 
                 int time;
-                for(time = 0; time < ingredients.length; ++time) {
-                    tempIngredients.add(ingredients[time]);
-                }
 
                 time = Integer.parseInt(stringarray[3]);
-                Item tempItem = new Item(name, price, tempIngredients, time, "/");
+                Item tempItem = new Item(name, price, ingredients, time, "/");
                 this.menuItems.add(tempItem);
             }
         } catch (FileNotFoundException var12) {

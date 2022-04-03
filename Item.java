@@ -4,13 +4,13 @@ public class Item {
 
     //member variables
     private String itemName;
-    private LinkedList<String> ingredients;
+    private String ingredients;
     private double itemPrice;
     private int timeToComplete;
     private String image;
 
     //constructor
-    public Item(String itemName, double itemPrice, LinkedList<String> ingredients,  int timeToComplete, String image) {
+    public Item(String itemName, double itemPrice, String ingredients,  int timeToComplete, String image) {
         this.itemName = itemName;
         this.ingredients = ingredients;
         this.itemPrice = itemPrice;
@@ -28,18 +28,14 @@ public class Item {
         return this.itemName;
     }
 
-    public LinkedList<String> getIngredients() {
+    public String getIngredients() {
         return this.ingredients;
     }
 
-    //add ingredient
-    public void addIngredient(String ing) {
-        this.ingredients.add(ing);
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
     }
-    //remove ingredient
-    public boolean removeIngredient(String ing) {
-        return this.ingredients.remove(ing);
-    }
+
 
     //get item price
     public double getItemPrice() {
