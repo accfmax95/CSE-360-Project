@@ -18,19 +18,19 @@ public class test {
         LinkedList<String> ing = new LinkedList<>();
         ing.add("Beans");
         ing.add("Cheese");
-        Item item1 = new Item("Burrito", ing, 10.00, 2);
+        Item item1 = new Item("Burrito",10.00, ing,  2);
 
         ing = new LinkedList<>();
         ing.add("Bread");
         ing.add("Peanut Butter");
         ing.add("Jelly");
-        Item item2 = new Item("PBJ", ing, 3.20, 2);
+        Item item2 = new Item("PBJ",3.20, ing,  2);
 
         ing = new LinkedList<>();
         ing.add("Pepporoni");
         ing.add("Cheese");
         ing.add("Ham");
-        Item item3 = new Item("Pizza", ing, 12.25, 15);
+        Item item3 = new Item("Pizza",12.25, ing,  15);
 
         //add items to customer cart
         user.addItemToCart(item1);
@@ -67,7 +67,7 @@ public class test {
         ing.add("Sour Cream");
         ing.add("Guac");
         ing.add("Salsa");
-        Item item4 = new Item("Nachos", ing, 9.99, 8);
+        Item item4 = new Item("Nachos", 9.99, ing,  8);
 
         ing = new LinkedList<>();
         ing.add("Pasta Sauce");
@@ -75,13 +75,13 @@ public class test {
         ing.add("Seasoning");
         ing.add("Parmesean Cheese");
         ing.add("Angel Hair Pasta");
-        Item item5 = new Item("Spaghetti", ing, 13.50, 13);
+        Item item5 = new Item("Spaghetti",13.50, ing,  13);
 
         ing = new LinkedList<>();
         ing.add("Chicken");
         ing.add("Sauce");
         ing.add("Fried Rice");
-        Item item6 = new Item("Orange Chicken and Rice", ing , 8.25, 5);
+        Item item6 = new Item("Orange Chicken and Rice",8.25, ing ,  5);
 
         //add items to user2 cart
         user2.addItemToCart(item4);

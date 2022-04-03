@@ -9,7 +9,7 @@ public class Item {
     private int timeToComplete;
 
     //constructor
-    public Item(String itemName, LinkedList<String> ingredients, double itemPrice, int timeToComplete) {
+    public Item(String itemName, double itemPrice, LinkedList<String> ingredients,  int timeToComplete) {
         this.itemName = itemName;
         this.ingredients = ingredients;
         this.itemPrice = itemPrice;
