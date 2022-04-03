@@ -6,7 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
+import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.io.File;
@@ -50,9 +50,19 @@ public class Main extends Application
         } 
         catch (IOException e) 
         {
-    		System.out.println("Failed to Load Manager Data");
-    		//print failed to load Manager's data
+            Parent root = null;
+			try {
+				root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FailedToLoadManager.fxml")));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
+            Stage primaryStage2 = new Stage();
+            Scene scene = new Scene(root);
+            primaryStage2.setScene(scene);
+            primaryStage2.initModality(Modality.NONE);
+            primaryStage2.show();
             e.printStackTrace();
         }
     }

@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -100,8 +101,20 @@ public class ProfileController implements Initializable {
         }
         else
         {
-            System.out.println("Failed to Load User Data");
-            //print an error message
+    		Parent root = null;
+			try {
+				root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GrabDataError.fxml")));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+            Stage primaryStage = new Stage();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.initModality(Modality.NONE);
+            primaryStage.show();                
+
         }
     }
 }

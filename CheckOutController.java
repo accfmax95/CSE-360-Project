@@ -45,8 +45,13 @@ public class CheckOutController implements Initializable
         	if(cvcInput.getText().equals("") || expCard.getText().equals("") || contactInfoInput.getText().equals("") || 
         			cardNumber.getText().equals("") || cardName.getText().equals(""))
         	{
-        		System.out.println("Please fill all fields");
-        		//print an error message
+        		 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FillInFieldsError.fxml")));
+
+                 Stage primaryStage = new Stage();
+                 Scene scene = new Scene(root);
+                 primaryStage.setScene(scene);
+                 primaryStage.initModality(Modality.NONE);
+                 primaryStage.show();
         	}
         	else
         	{
@@ -255,8 +260,19 @@ public class CheckOutController implements Initializable
 		}
 		else
 		{
-			System.out.println("Failed to grab user data");
-			//print an error message
+			  Parent root = null;
+			try {
+				root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GrabDataError.fxml")));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+	            Stage primaryStage = new Stage();
+	            Scene scene = new Scene(root);
+	            primaryStage.setScene(scene);
+	            primaryStage.initModality(Modality.NONE);
+	            primaryStage.show();
 		}
 		
 	}
