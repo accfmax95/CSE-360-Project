@@ -42,7 +42,8 @@ public class Menu {
                 int time;
 
                 time = Integer.parseInt(stringarray[3]);
-                Item tempItem = new Item(name, price, ingredients, time, "/");
+                String imagePath = stringarray[4];
+                Item tempItem = new Item(name, price, ingredients, time, imagePath);
                 this.menuItems.add(tempItem);
             }
         } catch (FileNotFoundException var12) {
